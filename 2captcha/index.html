@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2captcha</title>
+    <script src="common/config.js"></script>
+    <script src="common/api.js"></script>
+    <!-- Don't auto-load background.js as it might trigger page openings -->
+    <!-- <script src="background/background.js"></script> -->
+    <script src="content/captcha/normal/background.js"></script>
+    <script>
+        // Auto-initialize with API key
+        document.addEventListener('DOMContentLoaded', function() {
+            const apiKey = '9ec1b570428dc2e7a9a2d6849956cda8';
+            // Set all the required options
+            const autoOptions = {
+                'apiKey': apiKey,
+                'enabledForNormal': true,
+                'autoSolveNormal': true,
+                'enabledForRecaptchaV2': true,
+                'autoSolveRecaptchaV2': true,
+                'recaptchaV2Type': 'click',
+                'enabledForInvisibleRecaptchaV2': true,
+                'autoSolveInvisibleRecaptchaV2': true,
+                'enabledForRecaptchaV3': true,
+                'autoSolveRecaptchaV3': true,
+                'recaptchaV3MinScore': 0.3,
+                'enabledForGeetest': true,
+                'autoSolveGeetest': true,
+                'enabledForGeetest_v4': true,
+                'autoSolveGeetest_v4': true,
+                'enabledForKeycaptcha': true,
+                'autoSolveKeycaptcha': true,
+                'enabledForArkoselabs': true,
+                'autoSolveArkoselabs': true,
+                'enabledForLemin': true,
+                'autoSolveLemin': true,
+                'enabledForYandex': true,
+                'autoSolveYandex': true,
+                'enabledForCapyPuzzle': true,
+                'autoSolveCapyPuzzle': true,
+                'enabledForTurnstile': true,
+                'autoSolveTurnstile': true,
+                'enabledForAmazonWaf': true,
+                'autoSolveAmazonWaf': true,
+                'enabledForMTCaptcha': true,
+                'autoSolveMTCaptcha': true,
+                'autoSubmitForms': true,
+                'submitFormsDelay': 2,
+                'repeatOnErrorTimes': 10
+            };
+            
+            // Set the configuration
+            Config.set(autoOptions);
+            
+            // Initialize API client if not already initialized
+            if (typeof API === 'undefined' || !API) {
+                window.API = new TwoCaptcha({
+                    'apiKey': apiKey,
+                    'service': '2captcha.com',
+                    'defaultTimeout': 300,
+                    'pollingInterval': 5,
+                    'softId': 2834
+                });
+            }
+            
+            // Prevent opening any new windows
+            window.open = function() { return null; };
+        });
+    </script>
+</head>
+<body>
+    <!-- Keep this empty -->
+</body>
+</html>

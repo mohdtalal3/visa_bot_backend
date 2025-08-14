@@ -1,0 +1,6 @@
+seleniumbase
+selenium
+flask
+supabase
+python-dotenv
+requests
