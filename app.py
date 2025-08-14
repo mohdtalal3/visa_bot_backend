@@ -156,9 +156,11 @@ class VisaBot:
             self.take_screenshot(driver, "consular_post_selected")
 
             # Wait for submit button to be enabled
-            driver.wait_for_element_visible("#submitbtn:not([disabled])", timeout=15)
-            submit_record = driver.find_element("#submitbtn:not([disabled])")
-            
+            try:
+                submit_record=driver.wait_for_element_visible("#submitbtn:not([disabled])", timeout=15)
+            except:
+                print("Submit button not found or not clickable.")
+            #submit_record = driver.find_element("#submitbtn:not([disabled])")
             if submit_record:
                 logger.info(f"Submit button is ready for user {self.user_id}")
                 
@@ -174,7 +176,7 @@ class VisaBot:
                 send_email(
                     self.email, 
                     "Visa Appointment Available!", 
-                    f"An appointment slot is available for {self.username}."
+                    f"An appointment slot is Booked for {self.username}."
                 )
                 # Update status to complete (1)
                 self.update_status(1)
