@@ -435,7 +435,13 @@ class VisaBot:
             
             # Navigate to appointment booking page
             #driver.get("https://www.usvisascheduling.com/en-US/schedule/?reschedule=true")
-            driver.wait_for_element_present("#reschedule_appointment",timeout=60)
+
+
+            try:
+                driver.wait_for_element_present("#reschedule_appointment",timeout=30)
+            except:
+                driver.refresh()
+                driver.wait_for_element_present("#reschedule_appointment",timeout=60)
             driver.click("#reschedule_appointment")
             self.take_screenshot(driver, "appointment_schedule_page_loaded")
             
