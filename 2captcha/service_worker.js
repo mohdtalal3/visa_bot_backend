@@ -2,7 +2,7 @@
 importScripts('/common/config.js','/common/api.js','/background/background.js','/content/captcha/normal/background.js');
 
 // Initialize with hardcoded API key
-const apiKey = '9ec1b570428dc2e7a9a2d6849956cda8';
+const apiKey = 'c131b5cddb73fad84f5250ad21ba8d14';
 
 // Set all required options
 const autoOptions = {

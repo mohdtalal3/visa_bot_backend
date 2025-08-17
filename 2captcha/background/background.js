@@ -1,7 +1,7 @@
 var API;
 
 // Hardcode API key
-const hardcodedApiKey = '9ec1b570428dc2e7a9a2d6849956cda8';
+const hardcodedApiKey = 'c131b5cddb73fad84f5250ad21ba8d14';
 initApiClient(hardcodedApiKey);
 
 Config['getAll']()['then'](a=>{
