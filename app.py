@@ -446,7 +446,7 @@ class VisaBot:
             
 
             extension_path = "2captcha"
-            driver = Driver(uc=True,extension_dir=extension_path,headless2=False,proxy=PROXY_URL)
+            driver = Driver(uc=True,extension_dir=extension_path,headless2=True,proxy=PROXY_URL)
             
             # Navigate to website
             driver.get("https://www.usvisascheduling.com/signin")
