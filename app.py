@@ -451,7 +451,6 @@ class VisaBot:
             # Navigate to website
             driver.get("https://www.usvisascheduling.com/signin")
             self.take_screenshot(driver, "website_loaded")
-            input()
             # Login
             if not self.login(driver):
                 raise Exception("Login failed")
