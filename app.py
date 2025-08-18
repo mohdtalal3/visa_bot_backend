@@ -58,19 +58,24 @@ class VisaBot:
         
         # Create screenshots directory for this user
         if ENABLE_SCREENSHOTS:
-            self.user_screenshot_dir = Path(SCREENSHOTS_DIR) / f"user_{self.user_id}" / datetime.now().strftime("%Y%m%d_%H%M%S")
+            self.user_screenshot_dir = Path(SCREENSHOTS_DIR) / f"user_{self.user_id}"
+            
+            # Remove existing screenshots for this user if they exist
+            if self.user_screenshot_dir.exists():
+                import shutil
+                shutil.rmtree(self.user_screenshot_dir)
+            
             self.user_screenshot_dir.mkdir(parents=True, exist_ok=True)
             logger.info(f"Screenshots will be saved to: {self.user_screenshot_dir}")
     
     def take_screenshot(self, driver, step_name):
-        """Take a screenshot with timestamp and step name"""
+        """Take a screenshot with step name (no timestamp)"""
         if not ENABLE_SCREENSHOTS:
             return
             
         try:
             self.screenshot_counter += 1
-            timestamp = datetime.now().strftime("%H%M%S")
-            filename = f"{self.screenshot_counter:02d}_{timestamp}_{step_name}.png"
+            filename = f"{self.screenshot_counter:02d}_{step_name}.png"
             screenshot_path = self.user_screenshot_dir / filename
             
             # Take screenshot using seleniumbase
