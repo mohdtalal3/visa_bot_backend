@@ -8,13 +8,37 @@ from selenium.webdriver.support.ui import Select
 from flask import Flask, request, jsonify
 from supabase import create_client, Client
 import logging
+from logging.handlers import RotatingFileHandler
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from utils import solve_captcha
 from constants import *
 from email_sender import send_email
-from dotenv import load_dotenv# Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+from dotenv import load_dotenv
+
+# Configure logging to both file and console
+log_dir = Path("logs")
+log_dir.mkdir(exist_ok=True)
+
+# Create a formatter
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
+# Configure root logger
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        # Rotating file handler - logs to file with rotation (10MB max, keep 5 files)
+        RotatingFileHandler(
+            log_dir / 'visa_bot.log',
+            maxBytes=10*1024*1024,  # 10MB
+            backupCount=5
+        ),
+        # Console handler - logs to console
+        logging.StreamHandler()
+    ]
+)
+
 logger = logging.getLogger(__name__)
 
 # Load environment variables
