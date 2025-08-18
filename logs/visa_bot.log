@@ -1,0 +1,216 @@
+2025-08-18 11:59:19,582 - __main__ - INFO - Starting Flask server and database scanner...
+2025-08-18 11:59:19,582 - __main__ - INFO - Check interval: 60 seconds
+2025-08-18 11:59:19,582 - __main__ - INFO - Retry interval: 30 seconds
+2025-08-18 11:59:19,582 - __main__ - INFO - Max concurrent instances: 10
+2025-08-18 11:59:19,582 - __main__ - INFO - Screenshots enabled: True
+2025-08-18 11:59:19,582 - __main__ - INFO - Screenshots directory: screenshots
+2025-08-18 11:59:19,587 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.101:5001
+2025-08-18 11:59:19,587 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-18 11:59:20,331 - httpx - INFO - HTTP Request: GET https://nwlcvmmaeudzwxxwxamw.supabase.co/rest/v1/users?select=%2A&status=eq.0 "HTTP/2 200 OK"
+2025-08-18 11:59:20,333 - __main__ - INFO - Submitting user 7 for processing
+2025-08-18 11:59:20,333 - __main__ - INFO - Submitting user 11 for processing
+2025-08-18 11:59:20,334 - __main__ - INFO - Screenshots will be saved to: screenshots/user_11
+2025-08-18 11:59:20,334 - __main__ - INFO - Starting automation for user 11
+2025-08-18 11:59:20,336 - __main__ - INFO - Screenshots will be saved to: screenshots/user_7
+2025-08-18 11:59:20,336 - __main__ - INFO - Starting automation for user 7
+2025-08-18 11:59:20,522 - httpx - INFO - HTTP Request: PATCH https://nwlcvmmaeudzwxxwxamw.supabase.co/rest/v1/users?id=eq.11 "HTTP/2 200 OK"
+2025-08-18 11:59:20,525 - __main__ - INFO - Updated status to 0 for user 11
+2025-08-18 11:59:20,536 - httpx - INFO - HTTP Request: PATCH https://nwlcvmmaeudzwxxwxamw.supabase.co/rest/v1/users?id=eq.7 "HTTP/2 200 OK"
+2025-08-18 11:59:20,539 - __main__ - INFO - Updated status to 0 for user 7
+2025-08-18 11:59:33,500 - __main__ - ERROR - Automation failed for user 7: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=139.0.7258.128)
+Stacktrace:
+0   uc_driver                           0x000000010263ae98 uc_driver + 5918360
+1   uc_driver                           0x000000010263242a uc_driver + 5882922
+2   uc_driver                           0x00000001020fee20 uc_driver + 429600
+3   uc_driver                           0x00000001020d3880 uc_driver + 252032
+4   uc_driver                           0x000000010217f0b8 uc_driver + 954552
+5   uc_driver                           0x0000000102188021 uc_driver + 991265
+6   uc_driver                           0x0000000102176ed8 uc_driver + 921304
+7   uc_driver                           0x000000010214329b uc_driver + 709275
+8   uc_driver                           0x0000000102143f81 uc_driver + 712577
+9   uc_driver                           0x00000001025f7ba0 uc_driver + 5643168
+10  uc_driver                           0x00000001025fba54 uc_driver + 5659220
+11  uc_driver                           0x00000001025d3412 uc_driver + 5493778
+12  uc_driver                           0x00000001025fc4ff uc_driver + 5661951
+13  uc_driver                           0x00000001025c23b4 uc_driver + 5424052
+14  uc_driver                           0x000000010261f718 uc_driver + 5805848
+15  uc_driver                           0x000000010261f8e0 uc_driver + 5806304
+16  uc_driver                           0x0000000102632001 uc_driver + 5881857
+17  libsystem_pthread.dylib             0x00007ff81b716df1 _pthread_start + 99
+18  libsystem_pthread.dylib             0x00007ff81b712857 thread_start + 15
+
+2025-08-18 11:59:33,565 - __main__ - INFO - Screenshot saved: 01_website_loaded.png
+2025-08-18 11:59:34,321 - httpx - INFO - HTTP Request: PATCH https://nwlcvmmaeudzwxxwxamw.supabase.co/rest/v1/users?id=eq.7 "HTTP/2 200 OK"
+2025-08-18 11:59:34,324 - __main__ - INFO - Updated last_checked for user 7
+2025-08-18 11:59:34,383 - __main__ - INFO - Screenshot saved: 01_automation_error.png
+2025-08-18 11:59:34,431 - __main__ - INFO - Screenshot saved: 02_automation_completed.png
+2025-08-18 11:59:34,514 - __main__ - INFO - Automation completed for user 7
+2025-08-18 11:59:52,719 - __main__ - INFO - Starting login process for user 11...
+2025-08-18 11:59:52,842 - __main__ - INFO - Screenshot saved: 02_login_page_loaded.png
+2025-08-18 11:59:53,147 - __main__ - INFO - Screenshot saved: 03_username_filled.png
+2025-08-18 11:59:53,256 - __main__ - INFO - Screenshot saved: 04_password_filled.png
+2025-08-18 11:59:57,366 - __main__ - INFO - Screenshot saved: 05_captcha_page_loaded.png
+2025-08-18 11:59:57,366 - __main__ - INFO - CAPTCHA attempt 1/10 for user 11...
+2025-08-18 11:59:57,444 - __main__ - INFO - Screenshot saved: 06_captcha_attempt_1_image_visible.png
+2025-08-18 11:59:59,042 - __main__ - INFO - Solved CAPTCHA: AKFAP for user 11
+2025-08-18 11:59:59,194 - __main__ - INFO - Screenshot saved: 07_captcha_attempt_1_filled.png
+2025-08-18 12:00:01,343 - __main__ - INFO - Screenshot saved: 08_captcha_attempt_1_submitted.png
+2025-08-18 12:00:01,352 - __main__ - INFO - CAPTCHA accepted for user 11
+2025-08-18 12:00:01,414 - __main__ - INFO - Screenshot saved: 09_captcha_attempt_1_success.png
+2025-08-18 12:00:04,835 - __main__ - INFO - Screenshot saved: 10_login_successful.png
+2025-08-18 12:00:04,835 - __main__ - INFO - Login successful for user 11!
+2025-08-18 12:00:04,933 - __main__ - INFO - Screenshot saved: 11_before_security_questions.png
+2025-08-18 12:00:05,024 - __main__ - INFO - Screenshot saved: 12_security_questions_loaded.png
+2025-08-18 12:00:05,035 - __main__ - INFO - Processing security question: what was the name of your first/current/favorite pet?
+2025-08-18 12:00:05,123 - __main__ - INFO - Screenshot saved: 13_security_question_1_filled.png
+2025-08-18 12:00:05,126 - __main__ - INFO - Processing security question: what is your sibling's middle name?
+2025-08-18 12:00:05,216 - __main__ - INFO - Screenshot saved: 14_security_question_2_filled.png
+2025-08-18 12:00:05,291 - __main__ - INFO - Screenshot saved: 15_before_security_submit.png
+2025-08-18 12:00:05,401 - __main__ - INFO - Screenshot saved: 16_after_security_submit.png
+2025-08-18 12:00:20,898 - httpx - INFO - HTTP Request: GET https://nwlcvmmaeudzwxxwxamw.supabase.co/rest/v1/users?select=%2A&status=eq.0 "HTTP/2 200 OK"
+2025-08-18 12:00:20,901 - __main__ - INFO - Submitting user 7 for processing
+2025-08-18 12:00:20,902 - __main__ - INFO - Screenshots will be saved to: screenshots/user_7
+2025-08-18 12:00:20,902 - __main__ - INFO - Starting automation for user 7
+2025-08-18 12:00:21,113 - httpx - INFO - HTTP Request: PATCH https://nwlcvmmaeudzwxxwxamw.supabase.co/rest/v1/users?id=eq.7 "HTTP/2 200 OK"
+2025-08-18 12:00:21,114 - __main__ - INFO - Updated status to 0 for user 7
+2025-08-18 12:00:23,625 - __main__ - INFO - Screenshot saved: 17_after_security_questions_delay.png
+2025-08-18 12:00:30,677 - __main__ - INFO - Screenshot saved: 18_appointment_schedule_page_loaded.png
+2025-08-18 12:00:30,719 - __main__ - INFO - Screenshot saved: 19_appointment_booking_page_loaded.png
+2025-08-18 12:00:30,982 - __main__ - INFO - Screenshot saved: 20_before_consular_post_selection.png
+2025-08-18 12:00:30,988 - __main__ - ERROR - Failed to book appointment for user 11: Alert Text: An error has occurred!
+Message: unexpected alert open: {Alert text : An error has occurred!}
+  (Session info: chrome=139.0.7258.128)
+Stacktrace:
+0   uc_driver                           0x0000000102e5ce98 uc_driver + 5918360
+1   uc_driver                           0x0000000102e5442a uc_driver + 5882922
+2   uc_driver                           0x0000000102920e20 uc_driver + 429600
+3   uc_driver                           0x00000001029c0989 uc_driver + 1083785
+4   uc_driver                           0x0000000102998ce3 uc_driver + 920803
+5   uc_driver                           0x000000010296529b uc_driver + 709275
+6   uc_driver                           0x0000000102965f81 uc_driver + 712577
+7   uc_driver                           0x0000000102e19ba0 uc_driver + 5643168
+8   uc_driver                           0x0000000102e1da54 uc_driver + 5659220
+9   uc_driver                           0x0000000102df5412 uc_driver + 5493778
+10  uc_driver                           0x0000000102e1e4ff uc_driver + 5661951
+11  uc_driver                           0x0000000102de43b4 uc_driver + 5424052
+12  uc_driver                           0x0000000102e41718 uc_driver + 5805848
+13  uc_driver                           0x0000000102e418e0 uc_driver + 5806304
+14  uc_driver                           0x0000000102e54001 uc_driver + 5881857
+15  libsystem_pthread.dylib             0x00007ff81b716df1 _pthread_start + 99
+16  libsystem_pthread.dylib             0x00007ff81b712857 thread_start + 15
+
+2025-08-18 12:00:31,052 - __main__ - INFO - Screenshot saved: 21_appointment_booking_error.png
+2025-08-18 12:00:31,052 - __main__ - INFO - No appointments found for user 11, will retry later
+2025-08-18 12:00:31,654 - httpx - INFO - HTTP Request: PATCH https://nwlcvmmaeudzwxxwxamw.supabase.co/rest/v1/users?id=eq.11 "HTTP/2 200 OK"
+2025-08-18 12:00:31,656 - __main__ - INFO - Updated last_checked for user 11
+2025-08-18 12:00:31,658 - __main__ - ERROR - Failed to take screenshot for step 'automation_completed': Alert Text: An error has occurred!
+Message: unexpected alert open: {Alert text : An error has occurred!}
+  (Session info: chrome=139.0.7258.128)
+Stacktrace:
+0   uc_driver                           0x0000000102e5ce98 uc_driver + 5918360
+1   uc_driver                           0x0000000102e5442a uc_driver + 5882922
+2   uc_driver                           0x0000000102920e20 uc_driver + 429600
+3   uc_driver                           0x00000001029c0989 uc_driver + 1083785
+4   uc_driver                           0x0000000102998ce3 uc_driver + 920803
+5   uc_driver                           0x000000010296529b uc_driver + 709275
+6   uc_driver                           0x0000000102965f81 uc_driver + 712577
+7   uc_driver                           0x0000000102e19ba0 uc_driver + 5643168
+8   uc_driver                           0x0000000102e1da54 uc_driver + 5659220
+9   uc_driver                           0x0000000102df5412 uc_driver + 5493778
+10  uc_driver                           0x0000000102e1e4ff uc_driver + 5661951
+11  uc_driver                           0x0000000102de43b4 uc_driver + 5424052
+12  uc_driver                           0x0000000102e41718 uc_driver + 5805848
+13  uc_driver                           0x0000000102e418e0 uc_driver + 5806304
+14  uc_driver                           0x0000000102e54001 uc_driver + 5881857
+15  libsystem_pthread.dylib             0x00007ff81b716df1 _pthread_start + 99
+16  libsystem_pthread.dylib             0x00007ff81b712857 thread_start + 15
+
+2025-08-18 12:00:31,743 - __main__ - INFO - Automation completed for user 11
+2025-08-18 12:00:34,907 - __main__ - INFO - Screenshot saved: 01_website_loaded.png
+2025-08-18 12:00:54,241 - __main__ - INFO - Starting login process for user 7...
+2025-08-18 12:00:54,444 - __main__ - INFO - Screenshot saved: 02_login_page_loaded.png
+2025-08-18 12:00:54,592 - __main__ - INFO - Screenshot saved: 03_username_filled.png
+2025-08-18 12:00:54,717 - __main__ - INFO - Screenshot saved: 04_password_filled.png
+2025-08-18 12:00:58,799 - __main__ - INFO - Screenshot saved: 05_captcha_page_loaded.png
+2025-08-18 12:00:58,799 - __main__ - INFO - CAPTCHA attempt 1/10 for user 7...
+2025-08-18 12:00:58,873 - __main__ - INFO - Screenshot saved: 06_captcha_attempt_1_image_visible.png
+2025-08-18 12:01:00,567 - __main__ - INFO - Solved CAPTCHA: UtRyw for user 7
+2025-08-18 12:01:00,721 - __main__ - INFO - Screenshot saved: 07_captcha_attempt_1_filled.png
+2025-08-18 12:01:02,840 - __main__ - INFO - Screenshot saved: 08_captcha_attempt_1_submitted.png
+2025-08-18 12:01:02,844 - __main__ - INFO - CAPTCHA accepted for user 7
+2025-08-18 12:01:02,916 - __main__ - INFO - Screenshot saved: 09_captcha_attempt_1_success.png
+2025-08-18 12:01:02,982 - __main__ - INFO - Screenshot saved: 10_login_successful.png
+2025-08-18 12:01:02,982 - __main__ - INFO - Login successful for user 7!
+2025-08-18 12:01:03,048 - __main__ - INFO - Screenshot saved: 11_before_security_questions.png
+2025-08-18 12:01:08,263 - __main__ - INFO - Screenshot saved: 12_security_questions_loaded.png
+2025-08-18 12:01:08,274 - __main__ - INFO - Processing security question: what is your favorite food?
+2025-08-18 12:01:08,375 - __main__ - INFO - Screenshot saved: 13_security_question_1_filled.png
+2025-08-18 12:01:08,378 - __main__ - INFO - Processing security question: what is your sibling's middle name?
+2025-08-18 12:01:08,476 - __main__ - INFO - Screenshot saved: 14_security_question_2_filled.png
+2025-08-18 12:01:08,560 - __main__ - INFO - Screenshot saved: 15_before_security_submit.png
+2025-08-18 12:01:08,677 - __main__ - INFO - Screenshot saved: 16_after_security_submit.png
+2025-08-18 12:01:21,121 - __main__ - INFO - Screenshot saved: 17_after_security_questions_delay.png
+2025-08-18 12:01:21,664 - httpx - INFO - HTTP Request: GET https://nwlcvmmaeudzwxxwxamw.supabase.co/rest/v1/users?select=%2A&status=eq.0 "HTTP/2 200 OK"
+2025-08-18 12:01:21,666 - __main__ - INFO - Submitting user 11 for processing
+2025-08-18 12:01:21,669 - __main__ - INFO - Screenshots will be saved to: screenshots/user_11
+2025-08-18 12:01:21,669 - __main__ - INFO - Starting automation for user 11
+2025-08-18 12:01:21,860 - httpx - INFO - HTTP Request: PATCH https://nwlcvmmaeudzwxxwxamw.supabase.co/rest/v1/users?id=eq.11 "HTTP/2 200 OK"
+2025-08-18 12:01:21,863 - __main__ - INFO - Updated status to 0 for user 11
+2025-08-18 12:01:33,638 - __main__ - INFO - Screenshot saved: 01_website_loaded.png
+2025-08-18 12:02:04,541 - __main__ - INFO - Screenshot saved: 18_appointment_schedule_page_loaded.png
+2025-08-18 12:02:04,586 - __main__ - INFO - Screenshot saved: 19_appointment_booking_page_loaded.png
+2025-08-18 12:02:04,911 - __main__ - INFO - Screenshot saved: 20_before_consular_post_selection.png
+2025-08-18 12:02:06,213 - __main__ - INFO - Screenshot saved: 21_consular_post_selected.png
+2025-08-18 12:02:21,252 - __main__ - ERROR - Failed to book appointment for user 7: cannot access local variable 'submit_record' where it is not associated with a value
+2025-08-18 12:02:21,317 - __main__ - INFO - Screenshot saved: 22_appointment_booking_error.png
+2025-08-18 12:02:21,317 - __main__ - INFO - No appointments found for user 7, will retry later
+2025-08-18 12:02:21,771 - httpx - INFO - HTTP Request: PATCH https://nwlcvmmaeudzwxxwxamw.supabase.co/rest/v1/users?id=eq.7 "HTTP/2 200 OK"
+2025-08-18 12:02:21,774 - __main__ - INFO - Updated last_checked for user 7
+2025-08-18 12:02:21,862 - __main__ - INFO - Screenshot saved: 23_automation_completed.png
+2025-08-18 12:02:21,981 - __main__ - INFO - Automation completed for user 7
+2025-08-18 12:02:22,199 - httpx - INFO - HTTP Request: GET https://nwlcvmmaeudzwxxwxamw.supabase.co/rest/v1/users?select=%2A&status=eq.0 "HTTP/2 200 OK"
+2025-08-18 12:02:26,039 - __main__ - INFO - Starting login process for user 11...
+2025-08-18 12:02:26,150 - __main__ - INFO - Screenshot saved: 02_login_page_loaded.png
+2025-08-18 12:02:26,299 - __main__ - INFO - Screenshot saved: 03_username_filled.png
+2025-08-18 12:02:26,405 - __main__ - INFO - Screenshot saved: 04_password_filled.png
+2025-08-18 12:02:30,513 - __main__ - INFO - Screenshot saved: 05_captcha_page_loaded.png
+2025-08-18 12:02:30,513 - __main__ - INFO - CAPTCHA attempt 1/10 for user 11...
+2025-08-18 12:02:30,596 - __main__ - INFO - Screenshot saved: 06_captcha_attempt_1_image_visible.png
+2025-08-18 12:02:38,332 - __main__ - INFO - Solved CAPTCHA: ILVEF for user 11
+2025-08-18 12:02:38,450 - __main__ - INFO - Screenshot saved: 07_captcha_attempt_1_filled.png
+2025-08-18 12:02:40,610 - __main__ - INFO - Screenshot saved: 08_captcha_attempt_1_submitted.png
+2025-08-18 12:02:40,615 - __main__ - INFO - CAPTCHA accepted for user 11
+2025-08-18 12:02:40,681 - __main__ - INFO - Screenshot saved: 09_captcha_attempt_1_success.png
+2025-08-18 12:02:40,748 - __main__ - INFO - Screenshot saved: 10_login_successful.png
+2025-08-18 12:02:40,748 - __main__ - INFO - Login successful for user 11!
+2025-08-18 12:02:43,267 - __main__ - INFO - Screenshot saved: 11_before_security_questions.png
+2025-08-18 12:02:43,363 - __main__ - INFO - Screenshot saved: 12_security_questions_loaded.png
+2025-08-18 12:02:43,375 - __main__ - INFO - Processing security question: what is your favorite food?
+2025-08-18 12:02:43,463 - __main__ - INFO - Screenshot saved: 13_security_question_1_filled.png
+2025-08-18 12:02:43,465 - __main__ - INFO - Processing security question: what is your sibling's middle name?
+2025-08-18 12:02:43,556 - __main__ - INFO - Screenshot saved: 14_security_question_2_filled.png
+2025-08-18 12:02:43,632 - __main__ - INFO - Screenshot saved: 15_before_security_submit.png
+2025-08-18 12:02:43,751 - __main__ - INFO - Screenshot saved: 16_after_security_submit.png
+2025-08-18 12:02:59,315 - __main__ - INFO - Screenshot saved: 17_after_security_questions_delay.png
+2025-08-18 12:03:03,161 - __main__ - INFO - Screenshot saved: 18_appointment_schedule_page_loaded.png
+2025-08-18 12:03:03,208 - __main__ - INFO - Screenshot saved: 19_appointment_booking_page_loaded.png
+2025-08-18 12:03:03,380 - __main__ - INFO - Screenshot saved: 20_before_consular_post_selection.png
+2025-08-18 12:03:04,037 - __main__ - INFO - Screenshot saved: 21_consular_post_selected.png
+2025-08-18 12:03:19,088 - __main__ - ERROR - Failed to book appointment for user 11: cannot access local variable 'submit_record' where it is not associated with a value
+2025-08-18 12:03:19,176 - __main__ - INFO - Screenshot saved: 22_appointment_booking_error.png
+2025-08-18 12:03:19,176 - __main__ - INFO - No appointments found for user 11, will retry later
+2025-08-18 12:03:19,984 - httpx - INFO - HTTP Request: PATCH https://nwlcvmmaeudzwxxwxamw.supabase.co/rest/v1/users?id=eq.11 "HTTP/2 200 OK"
+2025-08-18 12:03:19,987 - __main__ - INFO - Updated last_checked for user 11
+2025-08-18 12:03:20,077 - __main__ - INFO - Screenshot saved: 23_automation_completed.png
+2025-08-18 12:03:20,210 - __main__ - INFO - Automation completed for user 11
+2025-08-18 12:03:22,498 - httpx - INFO - HTTP Request: GET https://nwlcvmmaeudzwxxwxamw.supabase.co/rest/v1/users?select=%2A&status=eq.0 "HTTP/2 200 OK"
+2025-08-18 12:03:22,498 - __main__ - INFO - Submitting user 7 for processing
+2025-08-18 12:03:22,499 - __main__ - INFO - Screenshots will be saved to: screenshots/user_7
+2025-08-18 12:03:22,499 - __main__ - INFO - Starting automation for user 7
+2025-08-18 12:03:22,724 - httpx - INFO - HTTP Request: PATCH https://nwlcvmmaeudzwxxwxamw.supabase.co/rest/v1/users?id=eq.7 "HTTP/2 200 OK"
+2025-08-18 12:03:22,726 - __main__ - INFO - Updated status to 0 for user 7
